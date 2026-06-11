@@ -255,7 +255,7 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  height: calc(100dvh - 160px);
+  height: calc(100dvh - 200px);
 }
 .chat-header { margin-bottom: 1rem; }
 .chat-header h2 {
