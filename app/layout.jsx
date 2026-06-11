@@ -8,6 +8,9 @@ const bebas = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-
 export const metadata = {
   title: 'World Cup 2026',
   description: 'Family World Cup tracker — fixtures, results, tables & chat',
+  icons: {
+    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>',
+  },
 };
 
 export default function RootLayout({ children }) {
