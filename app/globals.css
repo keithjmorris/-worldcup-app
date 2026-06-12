@@ -327,3 +327,45 @@ body {
   .team-name { font-size: 0.78rem; }
   .score { font-size: 1.3rem; }
 }
+
+/* ── Match Summary ───────────────────────────────────── */
+.match-summary-wrapper {
+  margin-top: -1px;
+  border: 1px solid var(--card-border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--card-bg);
+  overflow: hidden;
+}
+.summary-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+.summary-btn:hover {
+  background: #f9fafb;
+  color: var(--pitch);
+}
+.summary-box {
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid var(--card-border);
+}
+.summary-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.summary-loading {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+}
