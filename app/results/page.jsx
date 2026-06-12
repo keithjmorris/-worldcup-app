@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import MatchCard from '@/components/MatchCard';
+import MatchDetails from '@/components/MatchDetails';
 
 function MatchSummary({ match }) {
   const [summary, setSummary] = useState(null);
@@ -102,9 +103,10 @@ export default function ResultsPage() {
               </h2>
               <div className="match-list">
                 {dayMatches.map(match => (
-                  <div key={match.id}>
+                  <div key={match.id} className="match-block">
                     <MatchCard match={match} />
                     <MatchSummary match={match} />
+                    <MatchDetails match={match} />
                   </div>
                 ))}
               </div>
