@@ -1,5 +1,5 @@
 export async function GET(request, { params }) {
-  const { id } = params;
+  const { id } = await params;
 
   try {
     const res = await fetch(
@@ -12,13 +12,14 @@ export async function GET(request, { params }) {
           'X-Unfold-Bookings': 'true',
           'X-Unfold-Subs': 'true',
         },
-        next: { revalidate: 30 },
+        cache: 'no-store',
       }
     );
 
     if (!res.ok) {
+      const text = await res.text();
       return Response.json(
-        { error: `football-data API error: ${res.status}` },
+        { error: `football-data API error: ${res.status}`, detail: text },
         { status: res.status }
       );
     }
@@ -26,6 +27,6 @@ export async function GET(request, { params }) {
     const data = await res.json();
     return Response.json(data);
   } catch (err) {
-    return Response.json({ error: 'Failed to reach football-data API' }, { status: 500 });
+    return Response.json({ error: 'Failed to reach football-data API', detail: err.message }, { status: 500 });
   }
 }
