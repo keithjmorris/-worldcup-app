@@ -462,3 +462,35 @@ body {
   background: var(--pitch);
   color: white;
 }
+
+/* ── Lineups ─────────────────────────────────────────── */
+.lineup-team-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--pitch);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.lineup-player {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.lineup-shirt {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: white;
+  background: var(--pitch);
+  border-radius: 3px;
+  padding: 1px 4px;
+  min-width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.lineup-subbed-off {
+  text-decoration: line-through;
+  color: var(--muted);
+}
